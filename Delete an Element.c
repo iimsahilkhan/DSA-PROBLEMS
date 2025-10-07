@@ -1,9 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    int arr[] = {10,20,30,40,50};
-    int size = 5;
-    int pos = 3;
+    int arr[50], size, pos;
+    printf("Enter the Size of Array:");
+    scanf("%d",&size);
+    printf("Enter The Elements\n");
+    for(int i = 0; i<size; i++){
+        scanf("%d",&arr[i]);
+    }
+    printf("Enter Location:");
+    scanf("%d",&pos);
+    
     printf("Array Before Deletion:\n");
     for (int i = 0; i<size; i++){
         printf("%d\t",arr[i]);
