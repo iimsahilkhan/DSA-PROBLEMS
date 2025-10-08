@@ -18,3 +18,35 @@ int main(){
     }
     return 0;
 }
+
+//by Using User Input
+
+#include<stdio.h>
+int main(){
+    int arr[50], size, pos, ele;
+    printf("Enter Your Array Size:");
+    scanf("%d",&size);
+    printf("Enter Your Elements\n");
+    for(int i = 0; i<size; i++){
+        scanf("%d",&arr[i]);
+    }
+    printf("Enter Your Location:");
+    scanf("%d",&pos);
+    printf("Enter The Element:");
+    scanf("%d",&ele);
+    
+    printf("Array Before Insertion\n");
+    for(int i = 0; i<size; i++){
+        printf("%d\t",arr[i]);
+    }
+    for(int i = size; i>=pos; i--){
+        arr[i] = arr[i-1];
+    }
+    arr[pos-1] = ele;
+    printf("\nArray Afte Insertion\n");
+    for(int i = 0; i<(size+1); i++){
+        printf("%d\t",arr[i]);
+    }
+    
+    return 0;
+}
