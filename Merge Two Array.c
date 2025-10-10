@@ -21,3 +21,28 @@ int main(){
     printf("\n");
     return 0;
 }
+
+
+//without using function 
+
+#include<stdio.h>
+int main(){
+    int arr1[] = {1,4,6};
+    int size1 = 3;
+    int arr2[] = {2,3,5,8};
+    int size2 = 4;
+    int resultArr[5l];
+    int mergeArray[size1 + size2];
+    for (int i = 0; i<size1; i++){
+        resultArr[i] = arr1[i];
+    }
+    for (int i = 0; i<size2; i++){
+        resultArr[size1+i] = arr2[i];
+    }
+    printf("Merged Array:");
+    for (int i = 0; i<(size1+size2); i++){
+        printf("%d\t", resultArr[i]);
+    }
+    printf("\n");
+    return 0;
+}
